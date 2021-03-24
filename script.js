@@ -1,6 +1,6 @@
-const HOURHAND = document.querySelector("#hour");
-const MINUTEHAND = document.querySelector("#minute");
-const SECONDHAND = document.querySelector("#second");
+const hourHand = document.querySelector("#hour");
+const minuteHand = document.querySelector("#minute");
+const secondHand = document.querySelector("#second");
 
 function runTheClock() {
     var date = new Date();
@@ -14,9 +14,9 @@ function runTheClock() {
     let minPosition = (min*360/60)+(sec*(360/60)/60);
     let secPosition = sec*360/60;
 
-    HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
-    MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
-    SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
+    hourHand.style.transform = "rotate(" + hrPosition + "deg)";
+    minuteHand.style.transform = "rotate(" + minPosition + "deg)";
+    secondHand.style.transform = "rotate(" + secPosition + "deg)";
 }
 
 var interval = setInterval(runTheClock, 1000);
